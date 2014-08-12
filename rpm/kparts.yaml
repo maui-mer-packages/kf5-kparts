@@ -1,5 +1,5 @@
-Name         : kf5-kparts
-Version      : 5.0.0
+Name         : kparts
+Version      : 5.1.0
 Release      : 1
 Group        : System/Base
 License      : GPLv2+
@@ -25,17 +25,17 @@ PkgBR:
     - kf5-rpm-macros
     - extra-cmake-modules
     - qt5-tools
-    - kf5-kconfig-devel
-    - kf5-kcoreaddons-devel
-    - kf5-ki18n-devel
-    - kf5-kiconthemes-devel
-    - kf5-kio-devel
-    - kf5-kjobwidgets-devel
-    - kf5-knotifications-devel
-    - kf5-kservice-devel
-    - kf5-ktextwidgets-devel
-    - kf5-kwidgetsaddons-devel
-    - kf5-kxmlgui-devel
+    - kconfig-devel
+    - kcoreaddons-devel
+    - ki18n-devel
+    - kiconthemes-devel
+    - kio-devel
+    - kjobwidgets-devel
+    - knotifications-devel
+    - kservice-devel
+    - ktextwidgets-devel
+    - kwidgetsaddons-devel
+    - kxmlgui-devel
 PkgConfigBR:
     - Qt5Core
     - Qt5DBus
@@ -56,7 +56,7 @@ RequiresPostUn:
 Files:
     - "%doc COPYING.LIB README.md AUTHORS"
     - "%{_kf5_libdir}/libKF5Parts.so.*"
-    - "%{_kf5_datadir}/kservicetypes5/*.desktop"
+    - "%{_kf5_servicetypesdir}/*.desktop"
 
 SubPackages:
     - Name: devel
@@ -66,20 +66,20 @@ SubPackages:
         The %{name}-devel package contains the files necessary to develop applications
         that use %{name}.
       Requires:
-          - kf5-kconfig-devel
-          - kf5-kcoreaddons-devel
-          - kf5-ki18n-devel
-          - kf5-kiconthemes-devel
-          - kf5-kio-devel
-          - kf5-kjobwidgets-devel
-          - kf5-knotifications-devel
-          - kf5-kservice-devel
-          - kf5-ktextwidgets-devel
-          - kf5-kwidgetsaddons-devel
-          - kf5-kxmlgui-devel
+          - kconfig-devel
+          - kcoreaddons-devel
+          - ki18n-devel
+          - kiconthemes-devel
+          - kio-devel
+          - kjobwidgets-devel
+          - knotifications-devel
+          - kservice-devel
+          - ktextwidgets-devel
+          - kwidgetsaddons-devel
+          - kxmlgui-devel
       Files:
           - "%{_kf5_includedir}/kparts_version.h"
           - "%{_kf5_includedir}/KParts"
           - "%{_kf5_libdir}/libKF5Parts.so"
-          - "%{_kf5_libdir}/cmake/KF5Parts"
-          - "%{_datadir}/qt5/mkspecs/modules/*.pri"
+          - "%{_kf5_cmakedir}/KF5Parts"
+          - "%{_kf5_mkspecsdir}/*.pri"
