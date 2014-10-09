@@ -52,6 +52,9 @@ RequiresPost:
 RequiresPostUn:
     - /sbin/ldconfig
 
+LocaleName: kparts5_qt
+LocaleOptions: "--with-qt --all-name || :"
+
 Files:
     - "%doc COPYING.LIB README.md AUTHORS"
     - "%{_kf5_libdir}/libKF5Parts.so.*"
